@@ -120,11 +120,16 @@ const container = document.querySelector(".container"),
         }else{
           Swal.fire({
             icon : "success",
-            title : "Selamat bermain",
-            timer : 2000,
+            title : "Selamat bermain, " + data.username + " silahkan login kembali",
+            timer : 5000,
             showCancelButton: false,
                 showConfirmButton: false
           })
+          let detik 
+                detik = setTimeout(move, 5000)
+                function move(){
+                  location.href = "login.php"
+                }
           var username = document.getElementById('username').value
         $(document).ready(function(){
     
