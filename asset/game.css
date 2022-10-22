@@ -156,6 +156,9 @@ a {
     text-decoration: none;
     color: white;
     transition: all .3s ease;
+    width: 12px;
+    padding: 0 25px;
+    margin-left: -15px;
 }
 
 a:hover {

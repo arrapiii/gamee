@@ -35,8 +35,8 @@ const container = document.querySelector(".container"),
 
     
     function submitData(){
-        var username = document.getElementById('username').value
-        $(document).ready(function(){
+      var username = document.getElementById('username').value
+      $(document).ready(function(){
           var data = {
             name: $("#name").val(),
             username: $("#username").val(),
@@ -135,7 +135,7 @@ const container = document.querySelector(".container"),
             type: 'post',
             data: data,
             success:function(response){
-              if(response === "Successfull"){
+              if(data.username === value && data.password === value){
                 Swal.fire({
                   icon : "success",
                   title : "Hello Selamat bergabung",

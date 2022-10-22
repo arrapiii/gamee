@@ -44,19 +44,7 @@ else{
             <h1>ARROTTTT</h1>
         </footer>
     <script>
-function ulang(){
-    mulai();
-    myGameArea.clear();
-    myGameArea.stop();
-    
-}
-
-
-function kembali(){
-    location.reload();
-}
-
-       
+      
 var myGamePiece;
 var myObstacles = [];
 var myScore;
@@ -70,7 +58,7 @@ function mulai() {
     myGamePiece = new component(30, 30, a, 10, 120);
     myScore = new component("30px", "Consolas", "black", 705, 40, "text");
     myGameArea.start();
-    var myObstacles = [];
+    myObstacles = [];
 }
 
 var myGameArea = {
@@ -143,14 +131,14 @@ function updateGameArea() {
     var x, height, gap, minHeight, maxHeight, minGap, maxGap;
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
-            document.getElementById("btn-g").style.display="block"
             myGameArea.stop();
+            document.getElementById("btn-g").style.display="block"
             return;
         } 
     }
-    myGameArea.clear();
     myGamePiece.speedX = 0 ;
     myGamePiece.speedY = 0;
+    myGameArea.clear();
 
     if(myGameArea.key  == 65){
         myGamePiece.speedX = -5;
@@ -213,6 +201,20 @@ function clearmove() {
     myGamePiece.speedX = 0; 
     myGamePiece.speedY = 0; 
 } 
+
+function ulang(){
+    myGameArea.stop();
+    myGameArea.clear();
+    mulai();
+    
+}
+
+
+function kembali(){
+    location.reload();
+}
+
+ 
    
 
     </script>
